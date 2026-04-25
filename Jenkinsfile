@@ -3,9 +3,9 @@ pipeline {
 
     environment {
         IMAGE_NAME = 'zoople-devops-workshop-vijin:latest'
-        CONTAINER_NAME = 'vijin-app'
+        CONTAINER_NAME = 'sabin-app'
         APP_PORT = '3000'
-        DOMAIN = 'vijin.workshop.zoople.in'
+        DOMAIN = 'sabin.workshop.zoople.in'
         NGINX_DIR = '/home/ubuntu/nginx'
     }
 
@@ -37,7 +37,6 @@ pipeline {
                 docker run -d \
                   --name $CONTAINER_NAME \
                   --network nginx-network \
-                
                   --restart unless-stopped \
                   $IMAGE_NAME
 
